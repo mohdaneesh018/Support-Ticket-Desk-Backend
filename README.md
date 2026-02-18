@@ -18,22 +18,6 @@
 
 ---
 
-## 📁 Folder Structure
-
-src/
- ├── config/
- ├── controllers/
- ├── middlewares/
- ├── models/
- ├── routes/
- ├── services/
- ├── utils/
- └── app.js
-server.js
-.env
-
----
-
 ## 🔐 Authentication
 
 ### POST /api/auth/signup
