@@ -1,6 +1,8 @@
 # 🎫 Support Ticket System - Backend
 
-A role-based Support Ticket System built using Node.js, Express, MongoDB, and JWT authentication.
+- A role-based Support Ticket System built using Node.js, Express, MongoDB, and JWT Authentication.
+
+- This backend allows users to create and manage support tickets with proper role-based access (User & Admin).
 
 ---
 
@@ -12,6 +14,7 @@ A role-based Support Ticket System built using Node.js, Express, MongoDB, and JW
 - JWT Authentication
 - Role-Based Access Control
 - REST APIs
+- Postman (API Testing & Documentation)
 
 ---
 
@@ -34,7 +37,7 @@ server.js
 ## 🔐 Authentication
 
 ### POST /api/auth/signup
-Create a new user.
+Create a new user. 
 
 ### POST /api/auth/login
 Login user and return JWT token.
@@ -108,7 +111,6 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 
-
 ---
 
 ## ▶️ Run Locally
@@ -120,16 +122,24 @@ npm start
 
 Server runs at: http://localhost:5000
 
-Testing:-
-Tested using Thunder Client / Postman.
+---
 
-All endpoints verified:
+📬 API Documentation
 
-Auth
-Ticket CRUD
-Status transitions
-Role restrictions
-Comments
+All endpoints have been fully tested using Postman. 
+(Contains all request bodies, headers, authentication, and response examples.)
+
+
+🧪 Tested Endpoints
+
+✔ Authentication (Signup/Login)
+✔ Ticket CRUD
+✔ Status transitions validation
+✔ Role restrictions
+✔ Comments APIs
+✔ Pagination & Search
+
+---
 
 📌 Features Implemented
 
