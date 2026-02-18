@@ -10,80 +10,333 @@
     {
       "name": "Signup (User)",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"newUser@testing.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"user\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Login (User)",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"user@testing.com\",\r\n    \"password\": \"123456\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Create Ticket",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5NGMxNzNhZThiOGExNTlkNDdlZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcxNDEwNzA2LCJleHAiOjE3NzE0OTcxMDZ9.VUzAqdV9cLbDY3pG2OS-7gyqrY5RLKvBu8sX49pbetQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Payment not reflecting\",\r\n  \"description\": \"I made a payment but it is not showing in my dashboard.\",\r\n  \"category\": \"Billing\",\r\n  \"priority\": \"High\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tickets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Get All Tickets",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5NGMxNzNhZThiOGExNTlkNDdlZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcxNDEwNzA2LCJleHAiOjE3NzE0OTcxMDZ9.VUzAqdV9cLbDY3pG2OS-7gyqrY5RLKvBu8sX49pbetQ",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tickets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Get Single Ticket",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5NGMxNzNhZThiOGExNTlkNDdlZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzcxNDEwNzA2LCJleHAiOjE3NzE0OTcxMDZ9.VUzAqdV9cLbDY3pG2OS-7gyqrY5RLKvBu8sX49pbetQ",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tickets/699596c173ae8b8a159d47f2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets",
+            "699596c173ae8b8a159d47f2"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Update Ticket (Admin)",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5YTE3NzNhZThiOGExNTlkNDgwMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTQxMjE0NSwiZXhwIjoxNzcxNDk4NTQ1fQ.zkGW7BLsJbBUORA2dNUIt-MrRO3iZqb3TB4cS58wBOc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"Resolved\",\r\n  \"assigned_to\": \"699596c173ae8b8a159d47f2\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tickets/699596c173ae8b8a159d47f2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets",
+            "699596c173ae8b8a159d47f2"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Signup (Admin)",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"newAdmin@test.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Login (Admin)",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"newAdmin@test.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Add Comment",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5YTE3NzNhZThiOGExNTlkNDgwMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTQxMjE0NSwiZXhwIjoxNzcxNDk4NTQ1fQ.zkGW7BLsJbBUORA2dNUIt-MrRO3iZqb3TB4cS58wBOc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"comment\": \"We are currently investigating this issue.\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tickets/699596c173ae8b8a159d47f2/comments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets",
+            "699596c173ae8b8a159d47f2",
+            "comments"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Get Comments",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTU5YTE3NzNhZThiOGExNTlkNDgwMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTQxMjE0NSwiZXhwIjoxNzcxNDk4NTQ1fQ.zkGW7BLsJbBUORA2dNUIt-MrRO3iZqb3TB4cS58wBOc",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tickets/699596c173ae8b8a159d47f2/comments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tickets",
+            "699596c173ae8b8a159d47f2",
+            "comments"
+          ]
+        }
       },
       "response": []
     }
