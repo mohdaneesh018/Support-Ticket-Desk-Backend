@@ -114,8 +114,7 @@ JWT_SECRET=your_secret_key
 ---
 
 ## ▶️ Run Locally
-
-```bash
+ 
 npm install
 npm start
 
@@ -130,24 +129,24 @@ All endpoints have been fully tested using Postman.
 (Contains all request bodies, headers, authentication, and response examples.)
 
 
-🧪 Tested Endpoints
+## 🧪 Tested Endpoints
 
-✔ Authentication (Signup/Login)
-✔ Ticket CRUD
-✔ Status transitions validation
-✔ Role restrictions
-✔ Comments APIs
-✔ Pagination & Search
+- Authentication (Signup/Login)
+- Ticket CRUD
+- Status transitions validation
+- Role restrictions
+- Comments APIs
+- Pagination & Search
 
 ---
 
-📌 Features Implemented
+## 📌 Features Implemented
 
-✔ JWT Authentication
-✔ Role-Based Authorization
-✔ Ticket Management
-✔ Status Transition Validation
-✔ Pagination & Search
-✔ Comments System
-✔ Clean Folder Structure
-✔ Centralized Error Handling
+- JWT Authentication
+- Role-Based Authorization
+- Ticket Management
+- Status Transition Validation
+- Pagination & Search
+- Comments System
+- Clean Folder Structure
+- Centralized Error Handling
