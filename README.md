@@ -110,6 +110,9 @@ Server runs at: http://localhost:5000
 📬 API Documentation
 
 All endpoints have been fully tested using Postman. 
+
+🔗 Postman Published Documentation Link: https://documenter.getpostman.com/view/52494232/2sBXcDH1t8
+
 (Contains all request bodies, headers, authentication, and response examples.)
 
 
