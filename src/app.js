@@ -8,7 +8,7 @@ import errorHandler from "./middlewares/error.middleware.js";
 const app = express();
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: "https://support-ticket-desk-frontend.vercel.app/",
         credentials: true,
     })
 );
