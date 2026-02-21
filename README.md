@@ -6,6 +6,14 @@
 
 ---
 
+## 🌐 Live URLs:
+
+## Frontend Live URL: https://support-ticket-desk-frontend.vercel.app/
+
+## Backend Live URL: https://support-ticket-desk-backend-0g5r.onrender.com
+
+---
+
 ## 🚀 Tech Stack
 
 - Node.js
@@ -103,7 +111,7 @@ npm install
 npm start
 
 
-Server runs at: http://localhost:5000
+## Server runs at: http://localhost:5000
 
 ---
 
@@ -111,7 +119,7 @@ Server runs at: http://localhost:5000
 
 All endpoints have been fully tested using Postman. 
 
-🔗 Postman Published Documentation Link: https://documenter.getpostman.com/view/52494232/2sBXcDH1t8
+## 🔗 Postman Published Documentation Link: https://documenter.getpostman.com/view/52494232/2sBXcDH1t8
 
 (Contains all request bodies, headers, authentication, and response examples.)
 
